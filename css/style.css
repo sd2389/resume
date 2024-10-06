@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    color: rgb(49, 49, 49);
+    scroll-behavior: smooth;
+    font-weight: 700;
+    font-size: large;
+    text-align: justify;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+}
+
+h2 {
+ text-align: center;
+ font-size: large;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+hr {
+    height: 1.5px;
+    background-color: rgb(49, 49, 49);
+    border: none;
+    margin-bottom: 2% 0% 2% 0%;
+}
+
+
+/* Navbar */
+.navbar {
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+/* Default menu for large screens */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Hide the menu toggle button by default */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hide the checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+/* mobile and tablet view */
+@media (max-width: 768px) {
+    /* toggle button on smaller screens */
+    .menu-toggle {
+        display: block;
+        color: rgb(49, 49, 49);
+    }
+
+    /* Hide nav menu on small screens */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    .menu-checkbox:checked + .menu-toggle + .nav-menu {
+        display: flex;
+    }
+
+    /* Style for mobile view */
+    .nav-menu a {
+        font-size: 1.5rem;
+        padding: 10px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+
+/* Landing Page */
+.landing-page {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing-page h1 {
+    margin-bottom: -10px;
+}
+
+.vector-img {
+    width: 20%;
+    height: auto;
+}
+
+#changingText {
+    border-right: 2px solid;
+    animation: blink 1s step-end infinite;
+    font-weight: 800;
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(49, 49, 49); }
+}
+
+/* About Me */
+/* Base layout for larger screens */
+.about-content {
+    display: flex;
+    gap: 30px;
+}
+
+.profile-image {
+    width: 30%;
+    height: auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.skills {
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #F8F8F8;
+    border: 2px solid rgb(49, 49, 49);
+}
+
+.progress {
+    height: 100%;
+    background-color: rgb(49, 49, 49);
+}
+
+.progress-text {
+    font-size: small;
+    text-align: center;
+    margin-left: 1%;
+    padding: auto;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 80%;
+        /* margin-bottom: px; */
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .skills li {
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        width: 100%;
+    }
+
+    .progress-text {
+        font-size: 0.65rem;
+        margin-bottom: 10px;
+        text-align: center;
+        /* padding-right: 45px;  */
+    }
+}
+
+
+/* Language Cards */
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.language-card {
+    background-color: #fff;
+    border: 2px solid rgb(49, 49, 49);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.language-card:hover {
+    box-shadow: 7px 5px 5px rgb(168, 168, 168);
+}
+
+.language-card i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.language-card h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: rgb(49, 49, 49);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: rgb(49, 49, 49);
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .language-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .language-grid {
+        grid-template-columns: 1fr;
+    }
+}
