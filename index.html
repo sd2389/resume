@@ -13,32 +13,36 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="img/SD-logo.png" alt="logo"></a>
+    <div>
+        <nav class="navbar">
+            <div class="container-navbar">
+                <a class="navbar-brand" href="index.html"><img src="img/SD-logo.png" alt="logo"></a>
 
-            <!-- Hidden Checkbox to control the menu toggle -->
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle Menu">
-            <label for="menu-toggle" class="menu-toggle">&#9776;</label>
+                <!-- Hidden Checkbox to control the menu toggle -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle Menu">
+                <label for="menu-toggle" class="menu-toggle">&#9776;</label>
 
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#languages">Languages</a></li>
-                <li><a href="#contactme">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-    <div class="landing-page">
-        <img class="vector-img" src="https://m.media-amazon.com/images/I/51y8GUVKJoL.jpg" alt="Profile img">
-        <h1>Hi!</h1>
-        <h2>I'm Smit Desai</h2>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#contactme">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <section id="about-me">
+
+    <div class="container">
+        <div class="landing-page">
+            <img class="vector-img" src="https://m.media-amazon.com/images/I/51y8GUVKJoL.jpg" alt="Profile img">
+            <h1>Hi!</h1>
+            <h2>I'm Smit Desai</h2>
+        </div>
+    </div>
+
+    <div id="about-me">
         <div class="container">
             <h2 class="title-decoration">About Me</h2>
             <div class="about-content">
@@ -87,10 +91,61 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Assignments -->
+    <div id="assignments">
+        <div class="container">
+            <h2 class="title-decoration"> Assignments</h2>
+            <div class="assignments-grid">
+                <a href="assignment2.html" class="assignments-link">
+                    <div class="assignments-card">
+                        <div class="assignments-card-header">
+                            <h3>Assignment-2</h3>
+                            <!-- <hr> -->
+                            <span class="assignments-year"></span>
+                        </div>
+                        <div class="assignments-card-body">
+                            <!-- <p class="assignments-institution">P P Savani University</p> -->
+                            <img src="img/assignment2.jpg" alt="">
+                            <!-- <iframe src="assignment2.html" frameborder="0"></iframe> -->
+                            <hr>
+                            <ul class="assignments-details">
+                                <li>Q1: Reverse a string.</li>
+                                <li>Q2: Palindrome.</li>
+                                <li>Q3: Tip Calculator.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="assignments-link">
+                    <div class="assignments-card">
+                        <div class="assignments-card-header">
+                            <h3>Assignment-3</h3>
+                            <!-- <hr> -->
+                            <!-- <span class="assignments-year"></span> -->
+                        </div>
+                        <!-- <div class="assignments-card-body"> -->
+                        <p style="font-size: xx-large;text-align: center;">***Coming Soon***</p>
+                        <!-- <p class="assignments-institution">P P Savani University</p>
+                            <img src="img/assignment2.jpg" alt="">
+                            <hr>
+                            <ul class="assignments-details">
+                                <li>Q1: Area and Perimeter of a Circle.</li>
+                                <li>Q2: Area and Perimeter of a Rectangle.</li>
+                                <li>Q3: Area and Perimeter of a Cylinder.</li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
 
     <!-- education -->
-    <section id="education">
+    <div id="education">
         <div class="container">
             <h2 class="title-decoration">Education</h2>
             <div class="education-grid">
@@ -129,11 +184,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
-   <!-- experience -->
-    <section id="experience">
+    <!-- experience -->
+    <div id="experience">
         <div class="container">
             <h2 class="title-decoration">Experience</h2>
             <div class="experience-grid">
@@ -147,7 +202,8 @@
                         <p class="experience-institution">Adipiscing elit</p>
                         <ul class="experience-details">
                             <li>Lorem ipsum odor amet, consectetuer adipiscing elit.</li>
-                            <li>Lorem ipsum odor amet, consectetuer adipiscing elit. Magnis pretium viverra sagittis congue potenti luctus.</li>
+                            <li>Lorem ipsum odor amet, consectetuer adipiscing elit. Magnis pretium viverra sagittis
+                                congue potenti luctus.</li>
                         </ul>
                     </div>
                 </div>
@@ -161,16 +217,17 @@
                         <p class="experience-institution">Lorem</p>
                         <ul class="experience-details">
                             <li>Thesis on AI systems in healthcare</li>
-                            <li>Lorem ipsum odor amet, consectetuer adipiscing elit. Sollicitudin vehicula fames interdum efficitur at dictumst vulputate imperdiet cras.</li>
+                            <li>Lorem ipsum odor amet, consectetuer adipiscing elit. Sollicitudin vehicula fames
+                                interdum efficitur at dictumst vulputate imperdiet cras.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- languages and tools known -->
-    <section id="languages">
+    <div id="languages">
         <div class="container">
             <h2 class="title-decoration">Programming Languages & Tools</h2>
             <div class="language-grid">
@@ -220,10 +277,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- contactme -->
-    <section id="contactme">
+    <div id="contactme">
         <div class="container">
             <h2 class="title-decoration">Contact Us</h2>
             <div class="contactme-form">
@@ -252,9 +309,9 @@
                 </form>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- footer  -->
+    <!-- footer -->
 
     <footer>
         <div class="container">
@@ -267,6 +324,7 @@
             <p>&copy; 2024 Smit Desai. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 
 </html>

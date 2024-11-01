@@ -33,25 +33,33 @@ h2 {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 hr {
-    height: 2px;
-    background-color: rgb(49, 49, 49);
-    margin: 2% 0;
+    width: 60%;
+    border: 1.6px solid rgb(49, 49, 49);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 2% 0;
+    /* margin: 0 0 5% 0; */
 }
 
 /* Navbar */
-.navbar {
-    padding: 10px 0;
+.container-navbar{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
 }
 
-.navbar .container {
-    overflow: hidden;
+.navbar {
+    padding: 10px 0;
 }
 
 #menu-toggle {
@@ -242,6 +250,159 @@ hr {
         margin-right: 30px;
     }
 }
+
+
+/* assignments Section */
+
+.assignment-title {
+    text-align: center;
+    margin: 10% 0 8% 0;
+    font-size: 2.5em;
+    text-decoration: underline;
+}
+
+.assignment-task {
+    text-align: left;
+    margin: 4% 25% 0 25%;
+    font-size: x-large;
+    /* font-weight: 900; */
+}
+
+.assignment-description {
+    text-align: left;
+    margin: 1.5% 25% 2% 25%;
+    text-align: justify;
+    font-size: large;
+}
+
+
+.assignments-grid {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+pre {
+    margin: 0 25% 0 25%;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 4px;
+    margin-right: 25%;
+    overflow: auto;
+}
+
+code {
+    text-align: left;
+    display: block;
+    white-space: pre;
+    font-size: medium;
+    margin-left: -10%;
+}
+
+.input-contain {
+    margin: 0 25% 0 25%;
+}
+
+.assignments-card {
+    width: 48%;
+    float: left;
+    background-color: #F8F8F8;
+    border: 2px solid rgb(49, 49, 49);
+    padding: 20px;
+    margin: 1% 1% 5% 1%;
+    /* overflow: auto; */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 40%;
+}
+
+.assignments-card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.assignments-card-header hr {
+    width: 100%;
+    height: 1px;
+    border: 1px solid rgb(49, 49, 49);
+    margin: 2% 0 2% 0;
+}
+
+.assignments-card:hover {
+    box-shadow: 7px 5px 5px rgb(168, 168, 168);
+}
+
+.assignments-year {
+    font-weight: bold;
+    margin-top: -4%;
+    float: right;
+    color: #555;
+}
+
+.assignments-card-body h4 {
+    color: #666;
+    margin-top: 5px;
+}
+
+.assignments-card-body hr {
+    width: 100%;
+    margin: 2% 0 2% 0;
+}
+
+.assignments-card-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 5% auto;
+    border: 1px solid rgb(49, 49, 49);
+}
+
+.assignments-card-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 5% auto;
+    border: 1px solid rgb(49, 49, 49);
+}
+
+.assignments-card-body iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 25em;
+    display: block;
+    margin: 5% auto;
+    border: 1px solid rgb(49, 49, 49);
+}
+
+.assignments-institution {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.assignments-details {
+    padding-left: 0;
+    list-style: none;
+}
+
+.assignments-details li {
+    line-height: 1.5em;
+    padding-left: 20px;
+}
+
+/* Tablet and Mobile view */
+@media (max-width: 1020px) {
+    .assignments-card {
+        width: 90%;
+        float: none;
+        margin: 5% auto;
+        height: auto;
+    }
+
+    code {
+        margin-left: -45%;
+    }
+}
+
 
 
 /* Education Section */
@@ -516,6 +677,7 @@ footer {
     background-color: #F8F8F8;
     padding: 30px 0;
     margin-top: 40px;
+
 }
 
 .social-links {
@@ -536,7 +698,6 @@ footer {
 
 footer p {
     text-align: center;
-    margin: 0;
 }
 
 /* Tablet and Mobile view */

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    <link rel="icon" href="img/SD-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <div class="container-navbar">
+                <a class="navbar-brand" href="index.html"><img src="img/SD-logo.png" alt="logo"></a>
+
+                <!-- Hidden Checkbox to control the menu toggle -->
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle Menu">
+                <label for="menu-toggle" class="menu-toggle">&#9776;</label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#assignments">Assignments</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#contactme">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <h1 class="assignment-title">Assignment-2</h1>
+
+    <div>
+        <h2 class="assignment-task">Q1. Reverse String:</h2>
+        <p class="assignment-description">Java Script code to reverses the string.</p>
+        <pre><code>
+        function revstring() {
+            const input = document.getElementById("revinput").value;
+            let reversed = "";
+        
+            for (let i = input.length - 1;i >= 0;i--) {
+                reversed += input[i];
+            }
+        
+            document.getElementById("revresult").innerHTML = reversed;
+        }
+        </code></pre>
+        </p>
+        <div class="input-contain">
+            <input type="text" id="revinput" placeholder="Enter a String">
+            <button onclick="revstring()">Reverse String </button>
+            <p class="result" id="revresult"></p>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h2 class="assignment-task">Q2. Palindrome:</h2>
+        <p class="assignment-description">Palinidrome is word, phrase or a number that is read same forward and
+            backward.</p>
+        <pre><code>
+        function palindrome() {
+            const input = document.getElementById("palinput").value;
+            let reversed = "";
+        
+            for (let i = input.length - 1;i >= 0;i--) {
+                reversed += input[i];
+            }
+        
+            if (input == reversed) {
+                document.getElementById("palresult").innerHTML = "It is a palindrome";
+            } else {
+                document.getElementById("palresult").innerHTML = "It is not a palindrome";
+            }
+        } 
+        </code></pre>
+        </p>
+        <div class="input-contain">
+            <input type="text" id="palinput" placeholder="Enter Value">
+            <button onclick="palindrome()">Palindrome</button>
+            <p class="result" id="palresult"></p>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h2 class="assignment-task">Q3. Tip Calculator:</h2>
+        <p class="assignment-description">This code is used to calculate the sub-total and tip to give a total amount.
+        </p>
+        <pre><code>
+        function calculate() {
+            const subtotal = parseFloat(document.getElementById("subtotalinput").value);
+            const tippercent = parseFloat(document.getElementById("tipinput").value);
+        
+            if (!isNaN(subtotal) && !isNaN(tippercent)) {
+                const tipamount = subtotal * (tippercent / 100);
+                const totalamount = subtotal + tipamount;
+        
+                document.getElementById("tipresult").innerHTML = `Total Amount: $${ totalamount.toFixed(2)}`;
+            } else {
+                document.getElementById("tipresult").innerHTML = "Please enter Valid Numbers";
+            }
+        
+        } 
+        </code></pre>
+        </p>
+        <div class="input-contain">
+            <input type="number" id="subtotalinput" placeholder="Subtotal Price">
+            <input type="number" id="tipinput" placeholder="Tip Percentage">
+            <button onclick="calculate()">Calculate</button>
+            <p id="tipresult"></p>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/smssmit" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://facebook.com/smssmit" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/smit_desai" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/+1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2024 Smit Desai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/assignment2.js"></script>
+</body>
+
+</html>
