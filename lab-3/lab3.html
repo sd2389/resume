@@ -35,8 +35,9 @@
     <h1 class="assignment-title">Lab-3</h1>
 
     <div>
-        <h2 class="assignment-task">Q1. Area and Perimeter of a circle.</h2>
-        <p class="assignment-description">Finding area and perimeter of circle where radius is given by user in JavaScript</p>
+        <h2 class="assignment-task">Q1. Area and Perimeter of a Circle.</h2>
+        <p class="assignment-description">Finding area and perimeter of circle where radius is given by user in
+            JavaScript</p>
         <pre><code>
         function calculate_area_circle() {
             const radius = document.getElementById("area_perimeter_circle").value;
@@ -59,38 +60,68 @@
     <hr>
 
     <div>
-        <h2 class="assignment-task">Q2. Palindrome:</h2>
-        <p class="assignment-description">Palinidrome is word, phrase or a number that is read same forward and
-            backward.</p>
+        <h2 class="assignment-task">Q2. Area and Perimeter of a Rectangle.</h2>
+        <p class="assignment-description">Finding area and perimeter of rectangle where width and height is given by
+            user in JavaScript</p>
         <pre><code>
-        function palindrome() {
-            const input = document.getElementById("palinput").value;
-            let reversed = "";
+        function calculate_area_perimeter_rectangle() {
+            const width = parseFloat(document.getElementById("area_perimeter_rectangle1").value);
+            const height = parseFloat(document.getElementById("area_perimeter_rectangle2").value);
         
-            for (let i = input.length - 1;i >= 0;i--) {
-                reversed += input[i];
+            if (!isNaN(width) && !isNaN(height) && width > 0 && height > 0) {
+                const area = width * height;
+                const perimeter = 2 * (width * height);
+                document.getElementById("a_per_rectangle_result").innerHTML = "Area = " + area.toFixed(2) + "<br>Perimeter = " + perimeter.toFixed(2);
             }
-        
-            if (input == reversed) {
-                document.getElementById("palresult").innerHTML = "It is a palindrome";
-            } else {
-                document.getElementById("palresult").innerHTML = "It is not a palindrome";
+            else {
+                document.getElementById("a_per_rectangle_result").innerHTML = "Input is not valid";
             }
-        } 
+        }
         </code></pre>
         </p>
         <div class="input-contain">
-            <input type="text" id="palinput" placeholder="Enter Value">
-            <button onclick="palindrome()">Palindrome</button>
-            <p class="result" id="palresult"></p>
+            <input type="number" id="area_perimeter_rectangle1" placeholder="Enter width">
+            <input type="number" id="area_perimeter_rectangle2" placeholder="Enter height">
+            <button onclick="calculate_area_perimeter_rectangle()">Calculate</button>
+            <p class="result" id="a_per_rectangle_result"></p>
         </div>
     </div>
     <hr>
 
     <div>
-        <h2 class="assignment-task">Q3. Tip Calculator:</h2>
-        <p class="assignment-description">This code is used to calculate the sub-total and tip to give a total amount.
+        <h2 class="assignment-task">Q3. Area and Volume of a Cylinder.</h2>
+        <p class="assignment-description">Finding area and volume of cylinder where radius and length is given by user
+            in JavaScript</p>
+        <pre><code>
+        function calculate_area_volume_cylinder() {
+            const radius = parseFloat(document.getElementById("area_volume_cylinder1").value);
+            const height = parseFloat(document.getElementById("area_volume_cylinder2").value);
+            
+            if (!isNaN(radius) && !isNaN(height) && radius > 0 && height > 0) {
+                const area = 2 * Math.PI * radius * (radius + height);
+                const volume = Math.PI * radius * radius * height;
+                document.getElementById("a_per_cylinder_result").innerHTML = "Area = " + area.toFixed(2) + "<br>Volume = " + volume.toFixed(2);
+            }
+            else {
+                document.getElementById("a_per_cylinder_result").innerHTML = "Input is not valid";
+            }
+        }
+        </code></pre>
         </p>
+        <div class="input-contain">
+            <input type="number" id="area_volume_cylinder1" placeholder="Enter radius">
+            <input type="number" id="area_volume_cylinder2" placeholder="Enter length">
+            <button onclick="calculate_area_volume_cylinder()">Calculate</button>
+            <p class="result" id="a_per_cylinder_result"></p>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h2 class="assignment-task">Q4. Tip Calculator:</h2>
+        <p class="assignment-description">Write a program that reads the subtotal and the gratuity rate, then computes
+            the gratuity and total. For example, if the user enters 10 for subtotal and 15% for gratuity rate, the
+            program displays $1.5 as gratuity and $11.5 as total.</p>
         <pre><code>
         function calculate() {
             const subtotal = parseFloat(document.getElementById("subtotalinput").value);
@@ -100,18 +131,20 @@
                 const tipamount = subtotal * (tippercent / 100);
                 const totalamount = subtotal + tipamount;
         
-                document.getElementById("tipresult").innerHTML = `Total Amount: $${ totalamount.toFixed(2)}`;
+                document.getElementById("gratuityresult").innerHTML = `Gratuity Amount: $${tipamount.toFixed(2)}`;
+                document.getElementById("tipresult").innerHTML = `Total Amount: $${totalamount.toFixed(2)}`;
             } else {
+                document.getElementById("gratuityresult").innerHTML = "Please enter Valid Numbers";
                 document.getElementById("tipresult").innerHTML = "Please enter Valid Numbers";
             }
-        
-        } 
+        }
         </code></pre>
         </p>
         <div class="input-contain">
             <input type="number" id="subtotalinput" placeholder="Subtotal Price">
             <input type="number" id="tipinput" placeholder="Tip Percentage">
             <button onclick="calculate()">Calculate</button>
+            <p id="gratuityresult"></p>
             <p id="tipresult"></p>
         </div>
     </div>
