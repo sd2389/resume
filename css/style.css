@@ -310,10 +310,10 @@ code {
     border: 2px solid rgb(49, 49, 49);
     padding: 20px;
     margin: 1% 1% 5% 1%;
-    /* overflow: auto; */
+    overflow: auto;
     transition: all 0.3s ease;
     cursor: pointer;
-    height: 40%;
+    height: 40em;
 }
 
 .assignments-card-header h3 {

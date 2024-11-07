@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-2</title>
-    <link rel="icon" href="img/SD-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../img/SD-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 </head>
@@ -15,45 +15,45 @@
     <div>
         <nav class="navbar">
             <div class="container-navbar">
-                <a class="navbar-brand" href="index.html"><img src="img/SD-logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="../img/SD-logo.png" alt="logo"></a>
 
                 <!-- Hidden Checkbox to control the menu toggle -->
                 <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle Menu">
                 <label for="menu-toggle" class="menu-toggle">&#9776;</label>
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#assignments">Assignments</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#languages">Languages</a></li>
-                    <li><a href="#contactme">Contacts</a></li>
+                    <li><a href="../index.html#about-me">About Me</a></li>
+                    <li><a href="../index.html#assignments">Assignments</a></li>
+                    <li><a href="../index.html#experience">Experience</a></li>
+                    <li><a href="../index.html#languages">Languages</a></li>
+                    <li><a href="../index.html#contactme">Contacts</a></li>
                 </ul>
             </div>
         </nav>
     </div>
 
-    <h1 class="assignment-title">Assignment-2</h1>
+    <h1 class="assignment-title">Lab-3</h1>
 
     <div>
-        <h2 class="assignment-task">Q1. Reverse String:</h2>
-        <p class="assignment-description">Java Script code to reverses the string.</p>
+        <h2 class="assignment-task">Q1. Area and Perimeter of a circle.</h2>
+        <p class="assignment-description">Finding area and perimeter of circle where radius is given by user in JavaScript</p>
         <pre><code>
-        function revstring() {
-            const input = document.getElementById("revinput").value;
-            let reversed = "";
-        
-            for (let i = input.length - 1;i >= 0;i--) {
-                reversed += input[i];
+        function calculate_area_circle() {
+            const radius = document.getElementById("area_perimeter_circle").value;
+            if (isNaN(radius) && radius > 0) {
+                const area = Math.PI * radius * radius;
+                const perimeter = 2 * Math.Pi * radius;
+                document.getElementById("a_per_circle_result").innerHTML = "Area = " + area.toFixed(2) + " Perimeter = " + perimeter.toFixed(2);
+            }else {
+                document.getElementById("a_per_circle_result").innerHTML = "Input is not valid";
             }
-        
-            document.getElementById("revresult").innerHTML = reversed;
         }
         </code></pre>
         </p>
         <div class="input-contain">
-            <input type="text" id="revinput" placeholder="Enter a String">
-            <button onclick="revstring()">Reverse String </button>
-            <p class="result" id="revresult"></p>
+            <input type="number" id="area_perimeter_circle" placeholder="Enter radius">
+            <button onclick="calculate_area_circle()">Calculate</button>
+            <p class="result" id="a_per_circle_result"></p>
         </div>
     </div>
     <hr>
@@ -129,7 +129,7 @@
         </div>
     </footer>
 
-    <script src="js/assignment2.js"></script>
+    <script src="lab3.js"></script>
 </body>
 
 </html>
